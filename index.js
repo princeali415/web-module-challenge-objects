@@ -14,7 +14,8 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-    /*Your code here*/
+    const obj = {name: name, price: price, category: category};
+    return obj
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
