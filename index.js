@@ -148,9 +148,19 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, rating) {
+    let filteredArr = []
+    for(let i in arr){
+        if (arr[i].rating >= rating){
+            filteredArr.push(arr[i])
+        }
+     }
+  return filteredArr
   }
+
+// function getReviewByRating(arr, rating) {        * Using .filter method to make it a one line solution 
+//  return arr.filter(i => i.rating >= rating)
+// }
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
