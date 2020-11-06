@@ -165,6 +165,7 @@ Use the getReviewsByRating function below to do the following:
   return arr.filter(i => i.rating >= Math.floor(rating) && i.rating <= (Math.floor(rating)+0.9))
  }
 
+ console.log(getReviewByRating(reviews, 4))
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -179,9 +180,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+    let filteredArr = [];
+    for (let i in arr){
+      if (arr[i]["feedback"].split(' ').length > 15){
+        filteredArr.push(arr[i]);
+      }
+    }
+    return filteredArr;
   }
+  console.log(getLongReviews(reviews))
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
