@@ -180,17 +180,21 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
+// function getLongReviews(arr) {
+//     let filteredArr = [];                                1. new array to push too
+//     for (let i in arr){                                  2. for loop to go through obj
+//       if (arr[i]["feedback"].split(' ').length > 15){    3. target feeback in each obj, use .split(' ') to separate and create a new array of the words in feedback, filter where length is greater than 15
+//         filteredArr.push(arr[i]);                        4. push the complete obj that satisfies conditional to the array we created 
+//       }
+//     }
+//     return filteredArr;                                  5. return the new array
+//   }
+
 function getLongReviews(arr) {
-    let filteredArr = [];
-    for (let i in arr){
-      if (arr[i]["feedback"].split(' ').length > 15){
-        filteredArr.push(arr[i]);
-      }
-    }
-    return filteredArr;
-  }
+  return arr.filter(i => i["feedback"].split(' ').length > 15);     // .filter method to filter(exactly like commented out solution above) .filter goes through each obj in array and the conditional to filter out the 
+}                                                                   // desired result
   console.log(getLongReviews(reviews))
-  
+
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
