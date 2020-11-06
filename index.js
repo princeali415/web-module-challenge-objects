@@ -148,19 +148,22 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(arr, rating) {
-    let filteredArr = []
-    for(let i in arr){
-        if (arr[i].rating >= rating){
-            filteredArr.push(arr[i])
-        }
-     }
-  return filteredArr
-  }
+// before the filtering we could check the typeof of rating... is it an int or a float. if its a int then we create two vaariables. one 
 
-// function getReviewByRating(arr, rating) {        * Using .filter method to make it a one line solution 
-//  return arr.filter(i => i.rating >= rating)
-// }
+
+//  function getReviewByRating(arr, rating) {
+//     let filteredArr = []                1. new arr to push too with the filtered objs
+//     for(let i in arr){                  2. intialize the for loop
+//         if (arr[i].rating >= Math.floor(rating) && arr[i].rating <= (Math.floor(rating)+0.9)){   3. conditional to check if the object contains a rating of the inputed rating or higher
+//             filteredArr.push(arr[i])    4. if it does the we push to the new arr
+//         }
+//      }
+//   return filteredArr                    5. return theat array
+//   }
+
+ function getReviewByRating(arr, rating) {        //* Using .filter method to make it a one line solution. .filter automatically filters through each obj in the array and filters out by rating within the range specified
+  return arr.filter(i => i.rating >= Math.floor(rating) && i.rating <= (Math.floor(rating)+0.9))
+ }
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
